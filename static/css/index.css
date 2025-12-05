@@ -290,17 +290,17 @@ td:hover {
   }
 }
 
-#mmmu-table {
+#mmr-table {
   table-layout: auto;
   width: 100%;
 }
 
-#mmmu-table th:not(:first-child),
-#mmmu-table td:not(:first-child) {
+#mmr-table th:not(:first-child),
+#mmr-table td:not(:first-child) {
   width: auto;
 }
 
-#mmmu-table tbody td:first-child {
+#mmr-table tbody td:first-child {
   text-align: left !important;
 }
 
