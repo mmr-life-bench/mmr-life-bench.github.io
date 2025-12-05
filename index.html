@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Paper Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; margin: 0; padding: 0; }
+    .navbar { background: #333; padding: 1em; color: white; text-align: center; }
+    .navbar a { color: white; margin: 0 1em; text-decoration: none; }
+    .hero { text-align: center; padding: 4em 1em; background: #f5f5f5; }
+    .hero h1 { font-size: 3em; margin-bottom: 0.3em; }
+    .hero h2 { font-size: 1.5em; color: #555; }
+    .links { margin: 2em 0; }
+    .links a { display: inline-block; margin: 0.5em; padding: 0.7em 1.5em; background: #0066cc; color: white; text-decoration: none; border-radius: 4px; }
+    .section { max-width: 800px; margin: 2em auto; padding: 0 1em; }
+    .section img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#paper">Paper</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>My Paper / Project Title</h1>
+    <h2>A short subtitle or tagline describing the paper/project</h2>
+    <div class="links">
+      <a href="paper/your_paper.pdf" target="_blank">📄 Download Paper (PDF)</a>
+      <!-- 如果还有代码 / 数据 /补充材料，也可以加链接 -->
+      <!-- <a href="code/">Code</a> -->
+    </div>
+  </section>
+
+  <section class="section" id="abstract">
+    <h3>Abstract / Overview</h3>
+    <p>
+      在这里写论文／项目简介 —— 研究动机、主要贡献、方法、结果简要等等。你可以分段、列 bullet。
+    </p>
+  </section>
+
+  <section class="section" id="figure">
+    <h3>Illustration / Overview Figure</h3>
+    <img src="static/images/overview.png" alt="Overview figure">
+    <p>图注：这里可以写对图的说明，比如 dataset composition, architecture, results summary 等。</p>
+  </section>
+
+  <!-- 你可以继续添加更多 section，比如 Code / Data / Contact / License 等 -->
+
+  <footer class="section" id="contact">
+    <p>Contact: your.email@example.com</p>
+  </footer>
+
+</body>
+</html>
