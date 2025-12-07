@@ -165,394 +165,69 @@
 
       <section class="section">
         <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-full has-text-centered content">
-    
-                    <h2 class="title is-3" id="leaderboard_mmr_life">MMR-Life Leaderboard: Model Performance</h2>
-                    <div class="content">
-                        <p class="mt-3">Accuracy scores for various models on the **MMR-Life** benchmark, categorized by reasoning type (Abductive, Analogical, Causal, Deductive, Inductive, Spatial, Temporal).</p>
-    
-                        <table class="js-sort-table" id="mmr-life-results">
-                            <thead>
-                                <tr>
-                                    <td colspan="9" style="text-align: left; font-weight: bold; padding-bottom: 10px;">Model Performance on MMR-Life (Accuracy %)</td>
-                                </tr>
-                                <tr>
-                                    <td class="js-sort-string"><strong>Model</strong></td>
-                                    <td class="js-sort-number"><strong>Abd</strong><br>(Abductive)</td>
-                                    <td class="js-sort-number"><strong>Ana</strong><br>(Analogical)</td>
-                                    <td class="js-sort-number"><strong>Cau</strong><br>(Causal)</td>
-                                    <td class="js-sort-number"><strong>Ded</strong><br>(Deductive)</td>
-                                    <td class="js-sort-number"><strong>Ind</strong><br>(Inductive)</td>
-                                    <td class="js-sort-number"><strong>Spa</strong><br>(Spatial)</td>
-                                    <td class="js-sort-number"><strong>Tem</strong><br>(Temporal)</td>
-                                    <td class="js-sort-number"><strong>Avg</strong><br>(Overall)</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="font-weight: bold;">
-                                    <td>Human</td>
-                                    <td>79.76</td>
-                                    <td>7.50</td>
-                                    <td>75.05</td>
-                                    <td>70.59</td>
-                                    <td>63.41</td>
-                                    <td>79.76</td>
-                                    <td>79.76</td>
-                                    <td>72.28</td>
-                                </tr>
-    
-                                <tr style="background-color: #f0f0f0;"><td colspan="9" style="text-align: left; font-weight: bold; border-top: 2px solid #333;">Closed-source & Thinking</td></tr>
-                                <tr>
-                                    <td>GPT-5</td>
-                                    <td>53.57</td>
-                                    <td><b class="best-score-text">78.37</b></td>
-                                    <td>41.06</td>
-                                    <td><b class="best-score-text">79.86</b></td>
-                                    <td>77.25</td>
-                                    <td>17.25</td>
-                                    <td><b class="best-score-text">41.47</b></td>
-                                    <td><b class="best-score-text">58.48</b></td>
-                                </tr>
-                                <tr>
-                                    <td>Gemini-2.5-Pro</td>
-                                    <td><b class="best-score-text">54.22</b></td>
-                                    <td>73.36</td>
-                                    <td>36.99</td>
-                                    <td>79.15</td>
-                                    <td>72.30</td>
-                                    <td><b class="best-score-text">25.10</b></td>
-                                    <td>35.60</td>
-                                    <td>56.58</td>
-                                </tr>
-                                <tr>
-                                    <td>Gemini-2.5-Flash</td>
-                                    <td>46.10</td>
-                                    <td>74.57</td>
-                                    <td>34.22</td>
-                                    <td>71.38</td>
-                                    <td>73.42</td>
-                                    <td>23.92</td>
-                                    <td>30.64</td>
-                                    <td>53.03</td>
-                                </tr>
-                                <tr>
-                                    <td>o4-mini</td>
-                                    <td>41.23</td>
-                                    <td>73.01</td>
-                                    <td>27.38</td>
-                                    <td>71.02</td>
-                                    <td>67.12</td>
-                                    <td>19.22</td>
-                                    <td>32.48</td>
-                                    <td>50.30</td>
-                                </tr>
-                                <tr>
-                                    <td>GPT-5-mini</td>
-                                    <td>44.81</td>
-                                    <td>69.55</td>
-                                    <td>32.32</td>
-                                    <td>74.91</td>
-                                    <td>68.02</td>
-                                    <td>12.16</td>
-                                    <td>29.36</td>
-                                    <td>49.70</td>
-                                </tr>
-                                <tr>
-                                    <td>Claude-Sonnet-4</td>
-                                    <td>36.84</td>
-                                    <td>60.55</td>
-                                    <td>44.11</td>
-                                    <td>66.78</td>
-                                    <td>55.63</td>
-                                    <td>15.69</td>
-                                    <td>28.07</td>
-                                    <td>45.11</td>
-                                </tr>
-    
-                                <tr style="background-color: #f0f0f0;"><td colspan="9" style="text-align: left; font-weight: bold; border-top: 2px solid #333;">Closed-source & No Thinking</td></tr>
-                                <tr>
-                                    <td>GPT-4.1</td>
-                                    <td>44.16</td>
-                                    <td>71.11</td>
-                                    <td>22.43</td>
-                                    <td>67.14</td>
-                                    <td>69.37</td>
-                                    <td>13.73</td>
-                                    <td>27.16</td>
-                                    <td>48.09</td>
-                                </tr>
-                                <tr>
-                                    <td>Claude-3.7-Sonnet</td>
-                                    <td>33.44</td>
-                                    <td>66.09</td>
-                                    <td>35.36</td>
-                                    <td>59.72</td>
-                                    <td>59.01</td>
-                                    <td>20.78</td>
-                                    <td>25.87</td>
-                                    <td>44.96</td>
-                                </tr>
-                                <tr>
-                                    <td>GPT-4o</td>
-                                    <td>46.75</td>
-                                    <td>65.22</td>
-                                    <td>25.86</td>
-                                    <td>51.24</td>
-                                    <td>65.32</td>
-                                    <td>11.37</td>
-                                    <td>25.87</td>
-                                    <td>44.62</td>
-                                </tr>
-                                <tr>
-                                    <td>GPT-4.1-mini</td>
-                                    <td>32.79</td>
-                                    <td>60.90</td>
-                                    <td>30.80</td>
-                                    <td>51.94</td>
-                                    <td>64.64</td>
-                                    <td>16.47</td>
-                                    <td>30.46</td>
-                                    <td>43.95</td>
-                                </tr>
-                                <tr>
-                                    <td>Doubao-1.5-vision</td>
-                                    <td>37.01</td>
-                                    <td>53.29</td>
-                                    <td>31.18</td>
-                                    <td>59.36</td>
-                                    <td>54.50</td>
-                                    <td>12.16</td>
-                                    <td>22.94</td>
-                                    <td>39.99</td>
-                                </tr>
-    
-                                <tr style="background-color: #f0f0f0;"><td colspan="9" style="text-align: left; font-weight: bold; border-top: 2px solid #333;">Open-source & Thinking</td></tr>
-                                <tr>
-                                    <td>VL-Rethinker-72B</td>
-                                    <td>36.36</td>
-                                    <td>50.52</td>
-                                    <td>33.84</td>
-                                    <td>55.83</td>
-                                    <td><b class="best-score-text">57.88</b></td>
-                                    <td>15.29</td>
-                                    <td>21.65</td>
-                                    <td>39.80</td>
-                                </tr>
-                                <tr>
-                                    <td>QVQ-72B-Preview</td>
-                                    <td>31.17</td>
-                                    <td>41.18</td>
-                                    <td><b class="best-score-text">38.40</b></td>
-                                    <td>47.70</td>
-                                    <td>30.86</td>
-                                    <td>14.12</td>
-                                    <td>16.51</td>
-                                    <td>31.13</td>
-                                </tr>
-                                <tr>
-                                    <td>MM-Eureka-Qwen-32B</td>
-                                    <td>23.70</td>
-                                    <td>42.56</td>
-                                    <td>25.48</td>
-                                    <td>49.12</td>
-                                    <td>28.83</td>
-                                    <td>16.86</td>
-                                    <td>17.98</td>
-                                    <td>29.67</td>
-                                </tr>
-                                <tr>
-                                    <td>MiMo-VL-7B-RL</td>
-                                    <td>38.31</td>
-                                    <td>26.47</td>
-                                    <td>28.14</td>
-                                    <td>62.90</td>
-                                    <td>25.23</td>
-                                    <td>13.33</td>
-                                    <td>20.73</td>
-                                    <td>29.22</td>
-                                </tr>
-                                <tr>
-                                    <td>VL-Rethinker-7B</td>
-                                    <td>30.84</td>
-                                    <td>40.48</td>
-                                    <td>21.29</td>
-                                    <td>28.62</td>
-                                    <td>43.02</td>
-                                    <td>13.73</td>
-                                    <td>11.93</td>
-                                    <td>28.29</td>
-                                </tr>
-                                <tr>
-                                    <td>Keye-VL-1.5-8B</td>
-                                    <td>19.48</td>
-                                    <td>21.63</td>
-                                    <td>23.19</td>
-                                    <td>13.78</td>
-                                    <td>19.59</td>
-                                    <td>13.73</td>
-                                    <td>23.30</td>
-                                    <td>19.96</td>
-                                </tr>
-                                <tr>
-                                    <td>Skywork-R1V-38B</td>
-                                    <td>24.03</td>
-                                    <td>9.52</td>
-                                    <td>16.35</td>
-                                    <td>24.03</td>
-                                    <td>11.04</td>
-                                    <td>9.80</td>
-                                    <td>10.28</td>
-                                    <td>13.83</td>
-                                </tr>
-    
-                                <tr style="background-color: #f0f0f0;"><td colspan="9" style="text-align: left; font-weight: bold; border-top: 2px solid #333;">Open-source & No Thinking</td></tr>
-                                <tr>
-                                    <td>Qwen2.5-VL-72B</td>
-                                    <td>35.06</td>
-                                    <td>55.02</td>
-                                    <td>35.36</td>
-                                    <td>51.94</td>
-                                    <td>54.73</td>
-                                    <td>12.94</td>
-                                    <td>23.67</td>
-                                    <td>40.02</td>
-                                </tr>
-                                <tr>
-                                    <td>Gemma3-27B</td>
-                                    <td>35.71</td>
-                                    <td>57.79</td>
-                                    <td>36.88</td>
-                                    <td>31.80</td>
-                                    <td>60.81</td>
-                                    <td>13.33</td>
-                                    <td>18.72</td>
-                                    <td>38.75</td>
-                                </tr>
-                                <tr>
-                                    <td>Gemma3-12B</td>
-                                    <td>24.35</td>
-                                    <td>51.21</td>
-                                    <td>15.97</td>
-                                    <td>28.27</td>
-                                    <td>43.47</td>
-                                    <td>10.59</td>
-                                    <td>16.15</td>
-                                    <td>29.93</td>
-                                </tr>
-                                <tr>
-                                    <td>Qwen2.5-VL-32B</td>
-                                    <td>24.35</td>
-                                    <td>42.73</td>
-                                    <td>21.67</td>
-                                    <td>50.18</td>
-                                    <td>26.58</td>
-                                    <td>14.90</td>
-                                    <td>16.51</td>
-                                    <td>28.66</td>
-                                </tr>
-                                <tr>
-                                    <td>Qwen2.5-VL-7B</td>
-                                    <td>25.97</td>
-                                    <td>35.64</td>
-                                    <td>21.29</td>
-                                    <td>22.26</td>
-                                    <td>40.32</td>
-                                    <td>9.02</td>
-                                    <td>12.48</td>
-                                    <td>25.22</td>
-                                </tr>
-                                <tr>
-                                    <td>InternVL3.5-30B-A3B</td>
-                                    <td>48.05</td>
-                                    <td>18.17</td>
-                                    <td>33.08</td>
-                                    <td>37.46</td>
-                                    <td>13.29</td>
-                                    <td>13.33</td>
-                                    <td>13.39</td>
-                                    <td>22.87</td>
-                                </tr>
-                                <tr>
-                                    <td>InternVL3.5-8B</td>
-                                    <td>35.71</td>
-                                    <td>9.86</td>
-                                    <td>19.01</td>
-                                    <td>32.16</td>
-                                    <td>10.14</td>
-                                    <td>13.33</td>
-                                    <td>17.43</td>
-                                    <td>18.01</td>
-                                </tr>
-                            </tbody>
-                        </table>
-    
-                        <p class="mt-4">
-                            **Key Reasoning Types:**
-                            <br>
-                            **Abd:** Abductive, **Ana:** Analogical, **Cau:** Causal, **Ded:** Deductive, **Ind:** Inductive, **Spa:** Spatial, **Tem:** Temporal.
-                            <br>
-                            <span style="background-color: #e6ffe6; padding: 2px 5px;">Green shading</span> indicates the highest model score in that column (excluding Human).
-                            <br>
-                            <span style="background-color: #ffe6e6; padding: 2px 5px;">Red shading</span> indicates the lowest model score in that column (excluding Random Chance, which is not present in this table).
-                        </p>
-                        
-                        </div>
-    
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <section class="columns is-centered m-6">
+          <div class="columns is-centered">
             <div class="column is-full has-text-centered content">
-              <h2 class="title is-3">Error Analysis</h2>
-              <div class="content has-text-justified">
-                <p>
-                  We study on the errors made by **GPT-5** and **Gemini-2.5-Pro**, the two strongest models on MMR-Life. For each model, we randomly select 20 incorrect examples from each reasoning type and identify the root causes of the model's erroneous responses. 
-                  The results reveal that **reasoning errors dominate at 32%**, with the model frequently making basic logical mistakes such as causal inversion (24%), temporal confusion (42%), and missing key steps (24%) during reasoning. 
-                  In addition, **abstraction errors (17%)**, which reflect the model's short-term thinking capabilities, such as the ability to make associations, are also notable.
-                  **Knowledge errors (17%)** and **perception errors (12%)** constitute substantial portions of failures, indicating challenges in recalling the correct knowledge for reasoning, as well as difficulties in identifying static attributes of objects (e.g., color, shape) and dynamic changes (e.g., movement). 
-                  By systematically examining these failures, we not only expose critical shortcomings in current MLLMs but also derive actionable insights that can inform the next generation of MLLMs.
+              <h2 class="title is-3" id="leaderboard">Leaderboard on MathVista (testmini)</h2>
+              <div class="content">
+                <p class="mt-3">Accuracy scores on the <b>testmini</b> subset (1,000 examples) of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                  <span class="mathvista">MathVista</span>.
                 </p>
-              </div>
-              <div class="content has-text-centered">
-                
-                <p> Error distribution over 140 annotated GPT-5 errors.</p>
-                
-                <p> Error distribution over 140 annotated Geimini-2.5-Pro errors.</p>
+                <div id="leaderboard"></div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="columns is-centered m-6">
-            <div class="column is-full has-text-centered content">
-              <h2 class="title is-3" id="examples">Error Examples</h2>
-              <div class="carousel results-carousel">
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/1.png" alt="MMR-Life Error Example 1" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/2.png" alt="MMR-Life Error Example 2" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/3.png" alt="MMR-Life Error Example 3" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/4.png" alt="MMR-Life Error Example 4" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/5.png" alt="MMR-Life Error Example 5" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/6.png" alt="MMR-Life Error Example 6" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/7.png" alt="MMR-Life Error Example 7" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/8.png" alt="MMR-Life Error Example 8" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/9.png" alt="MMR-Life Error Example 9" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/10.png" alt="MMR-Life Error Example 10" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/11.png" alt="MMR-Life Error Example 11" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/12.png" alt="MMR-Life Error Example 12" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/13.png" alt="MMR-Life Error Example 13" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/14.png" alt="MMR-Life Error Example 14" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/15.png" alt="MMR-Life Error Example 15" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/16.png" alt="MMR-Life Error Example 16" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/17.png" alt="MMR-Life Error Example 17" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/18.png" alt="MMR-Life Error Example 18" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/19.png" alt="MMR-Life Error Example 19" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/20.png" alt="MMR-Life Error Example 20" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/21.png" alt="MMR-Life Error Example 21" width="60%"/></div></div>
-            </div>
-            </div>
-          </section>
+      <section class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3">Error Analysis</h2>
+          <div class="content has-text-justified">
+            <p>
+              We study on the errors made by **GPT-5** and **Gemini-2.5-Pro**, the two strongest models on MMR-Life. For each model, we randomly select 20 incorrect examples from each reasoning type and identify the root causes of the model's erroneous responses. 
+              The results reveal that **reasoning errors dominate at 32%**, with the model frequently making basic logical mistakes such as causal inversion (24%), temporal confusion (42%), and missing key steps (24%) during reasoning. 
+              In addition, **abstraction errors (17%)**, which reflect the model's short-term thinking capabilities, such as the ability to make associations, are also notable.
+              **Knowledge errors (17%)** and **perception errors (12%)** constitute substantial portions of failures, indicating challenges in recalling the correct knowledge for reasoning, as well as difficulties in identifying static attributes of objects (e.g., color, shape) and dynamic changes (e.g., movement). 
+              By systematically examining these failures, we not only expose critical shortcomings in current MLLMs but also derive actionable insights that can inform the next generation of MLLMs.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="static/images/gpt-5_error.png" alt="error distribution" width="25%">
+            <p> Error distribution over 140 annotated GPT-5 errors.</p>
+            <img src="static/images/gemini_error.png" alt="error distribution" width="25%">
+            <p> Error distribution over 140 annotated Geimini-2.5-Pro errors.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3" id="examples">Error Examples</h2>
+            <div class="carousel results-carousel">
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/1.png" alt="MMR-Life Error Example 1" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/2.png" alt="MMR-Life Error Example 2" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/3.png" alt="MMR-Life Error Example 3" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/4.png" alt="MMR-Life Error Example 4" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/5.png" alt="MMR-Life Error Example 5" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/6.png" alt="MMR-Life Error Example 6" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/7.png" alt="MMR-Life Error Example 7" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/8.png" alt="MMR-Life Error Example 8" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/9.png" alt="MMR-Life Error Example 9" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/10.png" alt="MMR-Life Error Example 10" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/11.png" alt="MMR-Life Error Example 11" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/12.png" alt="MMR-Life Error Example 12" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/13.png" alt="MMR-Life Error Example 13" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/14.png" alt="MMR-Life Error Example 14" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/15.png" alt="MMR-Life Error Example 15" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/16.png" alt="MMR-Life Error Example 16" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/17.png" alt="MMR-Life Error Example 17" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/18.png" alt="MMR-Life Error Example 18" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/19.png" alt="MMR-Life Error Example 19" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/20.png" alt="MMR-Life Error Example 20" width="60%"/></div></div>
+              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/21.png" alt="MMR-Life Error Example 21" width="60%"/></div></div>
+          </div>
+        </div>
+      </section>
       
         <section class="columns is-centered m-6">
             <div class="column is-full has-text-centered content">
@@ -619,6 +294,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js" async></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
+    <script src="./static/js/leaderboard.js"></script>
+    <script src="./static/js/leaderboard_data.js"></script>
+    <script src="./static/js/sort-table.js"></script>
   </body>
 </html>
