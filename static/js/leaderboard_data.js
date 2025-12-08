@@ -12,7 +12,7 @@ score_table = {
         "Temporal": 79.76
     },
     "1": {
-        "Model": "gpt-5 \ud83e\udd47",
+        "Model": "GPT-5 \ud83e\udd47",
         "Source": "https://openai.com/index/introducing-gpt-5/",
         "Overall": 58.48,
         "Abductive": 53.57,
@@ -24,7 +24,7 @@ score_table = {
         "Temporal": 41.47
     },
     "2": {
-        "Model": "gemini-2.5-pro \ud83e\udd48",
+        "Model": "Gemini-2.5-Pro \ud83e\udd48",
         "Source": "https://doi.org/10.48550/arXiv.2507.06261",
         "Overall": 56.58,
         "Abductive": 54.22,
@@ -36,7 +36,7 @@ score_table = {
         "Temporal": 35.6
     },
     "3": {
-        "Model": "gemini-2.5-flash \ud83e\udd49",
+        "Model": "Gemini-2.5-Flash \ud83e\udd49",
         "Source": "https://doi.org/10.48550/arXiv.2507.06261",
         "Overall": 53.03,
         "Abductive": 46.1,
@@ -60,7 +60,7 @@ score_table = {
         "Temporal": 32.48
     },
     "5": {
-        "Model": "gpt-5-mini",
+        "Model": "GPT-5-mini",
         "Source": "https://openai.com/index/introducing-gpt-5/",
         "Overall": 49.7,
         "Abductive": 44.81,
@@ -72,7 +72,7 @@ score_table = {
         "Temporal": 29.36
     },
     "6": {
-        "Model": "gpt-4.1",
+        "Model": "GPT-4.1",
         "Source": "https://openai.com/index/gpt-4-1/",
         "Overall": 48.09,
         "Abductive": 44.16,
@@ -84,7 +84,7 @@ score_table = {
         "Temporal": 27.16
     },
     "7": {
-        "Model": "claude-sonnet-4-thinking",
+        "Model": "Claude-Sonnet-4-Thinking",
         "Source": "https://www.anthropic.com/news/claude-4",
         "Overall": 45.11,
         "Abductive": 36.84,
@@ -96,7 +96,7 @@ score_table = {
         "Temporal": 28.07
     },
     "8": {
-        "Model": "claude-3.7-sonnet",
+        "Model": "Claude-3.7-Sonnet",
         "Source": "https://www.anthropic.com/news/claude-3-7-sonnet",
         "Overall": 44.96,
         "Abductive": 33.44,
@@ -108,7 +108,7 @@ score_table = {
         "Temporal": 25.87
     },
     "9": {
-        "Model": "gpt-4o",
+        "Model": "GPT-4o",
         "Source": "https://openai.com/index/hello-gpt-4o/",
         "Overall": 44.62,
         "Abductive": 46.75,
@@ -120,7 +120,7 @@ score_table = {
         "Temporal": 25.87
     },
     "10": {
-        "Model": "gpt-4.1-mini",
+        "Model": "GPT-4.1-mini",
         "Source": "https://openai.com/index/gpt-4-1/",
         "Overall": 43.95,
         "Abductive": 32.79,
@@ -132,7 +132,7 @@ score_table = {
         "Temporal": 30.46
     },
     "11": {
-        "Model": "claude-sonnet-4",
+        "Model": "Claude-Sonnet-4",
         "Source": "https://www.anthropic.com/news/claude-4",
         "Overall": 42.64,
         "Abductive": 35.39,
@@ -156,7 +156,7 @@ score_table = {
         "Temporal": 23.67
     },
     "13": {
-        "Model": "doubao-1.5-vision",
+        "Model": "Doubao-1.5-Vision",
         "Source": "https://seed.bytedance.com/en/special/doubao_1_5_pro",
         "Overall": 39.99,
         "Abductive": 37.01,
@@ -192,7 +192,7 @@ score_table = {
         "Temporal": 18.35
     },
     "16": {
-        "Model": "gpt-4o-mini",
+        "Model": "GPT-4o-mini",
         "Source": "https://openai.com/index/hello-gpt-4o/",
         "Overall": 35.05,
         "Abductive": 23.7,
@@ -454,17 +454,5 @@ score_table = {
         "Inductive": 10.36,
         "Spatial": 10.98,
         "Temporal": 10.28
-    },
-    "38": {
-        "Model": "Kimi-VL-A3B",
-        "Source": "https://arxiv.org/abs/2504.07491",
-        "Overall": 4.78,
-        "Abductive": 3.9,
-        "Analogical": 0.0,
-        "Causal": 0.38,
-        "Deductive": 20.14,
-        "Inductive": 0.0,
-        "Spatial": 4.71,
-        "Temporal": 8.44
     }
 }

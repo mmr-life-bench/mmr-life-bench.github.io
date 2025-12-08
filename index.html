@@ -28,6 +28,7 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+    <script type="text/javascript" src="static/js/sort-table.js" defer></script>
   </head>
   <body>
 
@@ -45,49 +46,33 @@
                 Piecing Together Real-life Scenes <br> for Multimodal Multi-image Reasoning
               </h2>
               <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="https://xiangyue9607.github.io/" style="text-decoration: none; color: inherit;">Xiang Yue*†</a>,
+                <!-- <span class="author-block">
+                  <a href="https://xiangyue9607.github.io/" style="text-decoration: none; color: inherit;">Jiachun Li*†</a>,
                 </span>
                 <span class="author-block">
-                  <a href="https://yuanshengni.github.io/" style="text-decoration: none; color: inherit;">Yuansheng Ni*</a>,
+                  <a href="https://yuanshengni.github.io/" style="text-decoration: none; color: inherit;">Shaoping Huang*</a>,
                 </span>
                 <span class="author-block">
-                  <a href="https://drogozhang.github.io/" style="text-decoration: none; color: inherit;">Kai Zhang*</a>,
+                  <a href="https://drogozhang.github.io/" style="text-decoration: none; color: inherit;">Zhuoran Jin</a>,
                 </span>
                 <span class="author-block">
                   <a href="https://scholar.google.com/citations?hl=en&user=Vq-VZnUAAAAJ" style="text-decoration: none; color: inherit;">Tianyu Zheng*</a>,
                 </span>
-                <br>
-                <span class="author-block">Ruoqi Liu,</span>
-                <span class="author-block">Ge Zhang,</span>
-                <span class="author-block">Samuel Stevens,</span>
-                <span class="author-block">Dongfu Jiang,</span>
-                <span class="author-block">Weiming Ren,</span>
-                <span class="author-block">Yuxuan Sun,</span>
-                <span class="author-block">Cong Wei,</span>
-                <span class="author-block">Botao Yu,</span>
-                <span class="author-block">Ruibin Yuan,</span>
-                <span class="author-block">Renliang Sun,</span>
-                <span class="author-block">Ming Yin,</span>
-                <span class="author-block">Boyuan Zheng,</span>
-                <span class="author-block">Zhenzhu Yang,</span>
-                <span class="author-block">Yibo Liu,</span>
-                <span class="author-block">Wenhao Huang,</span><br>
-                <span class="author-block">
-                  <a href="https://web.cse.ohio-state.edu/~sun.397/" style="text-decoration: none; color: inherit;">Huan Sun*</a>,
-                </span>
-                <span class="author-block">
-                  <a href="https://ysu1989.github.io/" style="text-decoration: none; color: inherit;">Yu Su*†</a>,
-                </span>
-                <span class="author-block">
-                  <a href="https://wenhuchen.github.io/" style="text-decoration: none; color: inherit;">Wenhu Chen*†</a>
-                </span>
+                <br> -->
+                <span class="author-block">Jiachun Li*†,</span>
+                <span class="author-block">Shaoping Huang*,</span>
+                <span class="author-block">Zhuoran Jin,</span>
+                <span class="author-block">Chenlong Zhang,</span>
+                <span class="author-block">Pengfei Cao,</span>
+                <span class="author-block">Yubo Chen,</span>
+                <span class="author-block">Kang Liu,</span>
+                <span class="author-block">Jun Zhao</span>
               </div>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block">*Core Contributors</span><br>
                 <span class="author-block">†Corresponding to:</span>
-                <span class="author-block"><a href="mailto:xiangyue.work@gmail.com">xiangyue.work@gmail.com</a></span>
+                <span class="author-block"><a href="mailto:1641412838@qq.com">1641412838@qq.com</a></span>
             
               </div>
 
@@ -185,12 +170,10 @@
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-full has-text-centered content">
-              <h2 class="title is-3" id="leaderboard">Leaderboard on MathVista (testmini)</h2>
+              <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
               <div class="content">
-                <p class="mt-3">Accuracy scores on the <b>testmini</b> subset (1,000 examples) of <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                  <span class="mathvista">MathVista</span>.
-                </p>
-                <div id="leaderboard"></div>
+                <p class="mt-3">Performance comparison of SOTA MLLMs on MMR-Life.</p>
+                <div id="main_result"></div>
               </div>
             </div>
           </div>
@@ -202,10 +185,10 @@
           <h2 class="title is-3">Error Analysis</h2>
           <div class="content has-text-justified">
             <p>
-              We study on the errors made by **GPT-5** and **Gemini-2.5-Pro**, the two strongest models on MMR-Life. For each model, we randomly select 20 incorrect examples from each reasoning type and identify the root causes of the model's erroneous responses. 
-              The results reveal that **reasoning errors dominate at 32%**, with the model frequently making basic logical mistakes such as causal inversion (24%), temporal confusion (42%), and missing key steps (24%) during reasoning. 
-              In addition, **abstraction errors (17%)**, which reflect the model's short-term thinking capabilities, such as the ability to make associations, are also notable.
-              **Knowledge errors (17%)** and **perception errors (12%)** constitute substantial portions of failures, indicating challenges in recalling the correct knowledge for reasoning, as well as difficulties in identifying static attributes of objects (e.g., color, shape) and dynamic changes (e.g., movement). 
+              We study on the errors made by GPT-5 and Gemini-2.5-Pro, the two strongest models on MMR-Life. For each model, we randomly select 20 incorrect examples from each reasoning type and identify the root causes of the model's erroneous responses. 
+              The results reveal that reasoning errors dominate at 32%, with the model frequently making basic logical mistakes such as causal inversion (24%), temporal confusion (42%), and missing key steps (24%) during reasoning. 
+              In addition, abstraction errors (17%), which reflect the model's short-term thinking capabilities, such as the ability to make associations, are also notable.
+              Knowledge errors (17%) and perception errors (12%) constitute substantial portions of failures, indicating challenges in recalling the correct knowledge for reasoning, as well as difficulties in identifying static attributes of objects (e.g., color, shape) and dynamic changes (e.g., movement). 
               By systematically examining these failures, we not only expose critical shortcomings in current MLLMs but also derive actionable insights that can inform the next generation of MLLMs.
             </p>
           </div>
