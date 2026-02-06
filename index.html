@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/leaderboard.css">
     <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
     <!-- <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,9 +32,10 @@
     <script type="text/javascript" src="static/js/sort-table.js" defer></script>
   </head>
   <body>
+    <main>
 
-
-    <section class="hero">
+    <!-- 顶部英雄区 -->
+    <section class="hero is-medium hero-top">
       <div class="hero-body">
         <div class="container is-max-desktop">
           <div class="columns is-centered">
@@ -43,24 +45,11 @@
                 <span class="mmmu" style="vertical-align: middle">MMR-Life</span>
               </h1>
               <h2 class="subtitle is-3 publication-subtitle">
-                Piecing Together Real-life Scenes <br> for Multimodal Multi-image Reasoning
+                Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning
               </h2>
               <div class="is-size-5 publication-authors">
-                <!-- <span class="author-block">
-                  <a href="https://xiangyue9607.github.io/" style="text-decoration: none; color: inherit;">Jiachun Li*†</a>,
-                </span>
-                <span class="author-block">
-                  <a href="https://yuanshengni.github.io/" style="text-decoration: none; color: inherit;">Shaoping Huang*</a>,
-                </span>
-                <span class="author-block">
-                  <a href="https://drogozhang.github.io/" style="text-decoration: none; color: inherit;">Zhuoran Jin</a>,
-                </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?hl=en&user=Vq-VZnUAAAAJ" style="text-decoration: none; color: inherit;">Tianyu Zheng*</a>,
-                </span>
-                <br> -->
-                <span class="author-block">Jiachun Li*†,</span>
-                <span class="author-block">Shaoping Huang*,</span>
+                <span class="author-block core-author">Jiachun Li*†,</span>
+                <span class="author-block core-author">Shaoping Huang*,</span>
                 <span class="author-block">Zhuoran Jin,</span>
                 <span class="author-block">Chenlong Zhang,</span>
                 <span class="author-block">Pengfei Cao,</span>
@@ -68,42 +57,48 @@
                 <span class="author-block">Kang Liu,</span>
                 <span class="author-block">Jun Zhao</span>
               </div>
-
-              <div class="is-size-5 publication-authors">
+              <br>
+              <div class="is-size-6 publication-authors">
                 <span class="author-block">*Core Contributors</span><br>
-                <span class="author-block">†Corresponding to:</span>
-                <span class="author-block"><a href="mailto:1641412838@qq.com">1641412838@qq.com</a></span>
-            
+                <span class="author-block">†Contact: <a href="mailto:1641412838@qq.com">1641412838@qq.com</a></span>
               </div>
 
               <div class="column has-text-centered">
-                <div class="publication-links">
+                <div class="pill-buttons">
+                  <a href="https://arxiv.org/abs/2311.16502" class="pill-btn">
+                    <i class="fas fa-file-pdf"></i><span>arXiv</span>
+                  </a>
+                  <a href="https://huggingface.co/datasets/Septzzz/MMR-Life" class="pill-btn">
+                    <span style="font-size:18px">🤗</span><span>Dataset</span>
+                  </a>
+                  <a href="https://github.com/BugMakerzzz/MMR-Life" class="pill-btn">
+                    <i class="fab fa-github"></i><span>Code</span>
+                  </a>
+                  <a href="#leaderboard" class="pill-btn">
+                    <i class="fa-solid fa-trophy"></i><span>Leaderboard</span>
+                  </a>
+                  <a href="#examples" class="pill-btn">
+                    <i class="fa-solid fa-book"></i><span>Examples</span>
+                  </a>
+                </div>
+              </div>
 
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2311.16502" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/Septzzz/MMR-Life" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon" style="font-size:18px">🤗</span>
-                      <span>MMR-Life</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://github.com/BugMakerzzz/MMR-Life" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                  
+              <div class="highlight-grid">
+                <div class="highlight-card">
+                  <p class="highlight-title">2,676 Questions</p>
+                  <p class="highlight-text">Multi-image multiple-choice tasks from daily scenes.</p>
+                </div>
+                <div class="highlight-card">
+                  <p class="highlight-title">19,367 Images</p>
+                  <p class="highlight-text">Household, dining, sports, and real-life contexts.</p>
+                </div>
+                <div class="highlight-card">
+                  <p class="highlight-title">7 Reasoning Types</p>
+                  <p class="highlight-text">Abductive / Analogical / Causal / Deductive / Inductive / Spatial / Temporal.</p>
+                </div>
+                <div class="highlight-card">
+                  <p class="highlight-title">37 Models Evaluated</p>
+                  <p class="highlight-text">Open-source & proprietary MLLMs under unified protocols.</p>
                 </div>
               </div>
             </div>
@@ -112,18 +107,29 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- 预览图/简介 -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-centered">
+        <img src="static/images/intro.png" alt="MMR-Life overview">
+        <p>MMR-Life focuses on real-life multi-image reasoning with heterogeneous everyday scenes.</p>
+      </div>
+    </section>
+
+    <!-- 新闻 & 简介 -->
+    <section class="section" id="overview">
       <div class="container" style="margin-bottom: 2vh;">
-        <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
-          <div class="column is-full">
-            <h2 class="title is-3">Abstract</h2>
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">🔔News</h2>
+            <div class="content has-text-justified">
+              <p class="news-item"><span class="news-date">📢[2026-02-07]</span> Officially open-sourced the paper, dataset, and code.</p>
+              <p class="news-item"><span class="news-date">🎉[2026-01-26]</span> Our paper was accepted to <span class="highlight">ICLR 2026</span>.</p>
+            </div>
+            <h2 class="title is-3">Introduction</h2>
             <div class="content has-text-justified">
               <p>
-                We introduce MMR-Life, a comprehensive benchmark designed to evaluate the diverse multimodal multi-image reasoning capabilities of MLLMs across real-life scenarios. MMR-Life consists of 2,676 multiple-choice questions based on 19,367 images primarily sourced from real-world contexts, comprehensively covering seven reasoning types: abductive, analogical, causal, deductive, inductive, spatial, and temporal. Unlike existing reasoning benchmarks, MMR-Life does not rely on domain-specific expertise but instead requires models to integrate information across multiple images and apply diverse reasoning abilities. The evaluation of 37 advanced models highlights the substantial challenge posed by MMR-Life. Even top models like GPT-5 achieve only 58\% accuracy and display considerable variance in performance across reasoning types. Moreover, we analyze the reasoning paradigms of existing MLLMs, exploring how factors such as thinking length, reasoning method, and reasoning type affect their performance. In summary, MMR-Life establishes a comprehensive foundation for evaluating, analyzing, and improving the next generation of multimodal reasoning systems.
+                Recent progress in the reasoning capabilities of multimodal large language models (MLLMs) has empowered them to address more complex tasks such as scientific analysis and mathematical reasoning. Despite their promise, MLLMs’ reasoning abilities across different scenarios in real life remain largely unexplored and lack standardized benchmarks for evaluation. To address this gap, we introduce MMR-Life, a comprehensive benchmark designed to evaluate the diverse multimodal multi-image reasoning capabilities of MLLMs across real-life scenarios. MMR-Life consists of <span class="intro-strong">2,676</span> multiple-choice questions based on <span class="intro-strong">19,367</span> images primarily sourced from real-world contexts, comprehensively covering seven reasoning types: abductive, analogical, causal, deductive, inductive, spatial, and temporal. Unlike existing reasoning benchmarks, MMR-Life does not rely on domain-specific expertise but instead requires models to integrate information across multiple images and apply diverse reasoning abilities. The evaluation of <span class="intro-strong">37</span> advanced models highlights the substantial challenge posed by MMR-Life. Even top models like GPT-5 achieve only <span class="intro-strong">58%</span> accuracy and display considerable variance in performance across reasoning types. Moreover, we analyze the reasoning paradigms of existing MLLMs, exploring how factors such as thinking length, reasoning method, and reasoning type affect their performance. In summary, MMR-Life establishes a comprehensive foundation for evaluating, analyzing, and improving the next generation of multimodal reasoning systems.
               </p>
-              <img src="static/images/intro.png" alt="algebraic reasoning" width="100%">
-              <br>
             </div>
           </div>
         </div>
@@ -131,7 +137,7 @@
     </section>
 
     <!-- DATASET SECTION -->
-    <section class="hero is-light is-small">
+    <section class="hero is-light is-small" id="dataset">
       <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">
           <img src="static/images/icon.png" alt="Logo" class="mmmu-logo"/>
@@ -144,151 +150,156 @@
       <div class="container">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Overview</h2>
+            <h2 class="title is-3">Dataset Overview</h2>
             <div class="content has-text-justified">
               <p>
-                We introduce the Multimodal Multi-image Reasoning benchmark under real-Life scenarios (MMR-Life), a novel benchmark meticulously curated to evaluate the ability of MLLMs to perform diverse types of reasoning in everyday situations.
+                MMR-Life evaluates how models integrate information across multiple images to solve everyday problems. Each item combines real-world photos (home, dining, travel, sports) with carefully designed distractors to test multi-step reasoning rather than single-image perception.
               </p>
-              <img src="static/images/example.png" alt="algebraic reasoning" class="center">
+              <img src="static/images/example.png" alt="MMR-Life example" class="center">
               <br>
               <p>
-                MMR-Life consists of 2,676 multiple-choice questions based on 19,367 images, comprehensively covering 7 reasoning types (i.e., abductive, analogical, causal, deductive, inductive, spatial, and temporal) and 21 tasks. Each task is based on a set of multi-images, predominantly sourced from real-life contexts, such as domestic life, daily dining, and sports activities.
+                Coverage: 2,676 questions, 19,367 images, 7 reasoning types, 21 tasks. Designed to be broad (commonsense-heavy) yet challenging (multi-hop reasoning with subtle visual cues).
               </p>
+            </div>
+            <div class="pill-grid">
+              <span class="pill">Real-world scenes</span>
+              <span class="pill">Multi-image inputs</span>
+              <span class="pill">Balanced reasoning skills</span>
+              <span class="pill">Commonsense heavy</span>
+              <span class="pill">Task diversity</span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
+
+    <!-- 结果 -->
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">Experiment Results</h1>
       </div>
     </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-full has-text-centered content">
-              <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
-              <div class="content">
-                <p class="mt-3">Performance comparison of SOTA MLLMs on MMR-Life.</p>
-                <div id="main_result"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="columns is-centered m-6">
-        <div class="column is-full has-text-centered content">
-          <h2 class="title is-3">Error Analysis</h2>
-          <div class="content has-text-justified">
-            <p>
-              We study on the errors made by GPT-5 and Gemini-2.5-Pro, the two strongest models on MMR-Life. For each model, we randomly select 20 incorrect examples from each reasoning type and identify the root causes of the model's erroneous responses. 
-              The results reveal that reasoning errors dominate at 32%, with the model frequently making basic logical mistakes such as causal inversion (24%), temporal confusion (42%), and missing key steps (24%) during reasoning. 
-              In addition, abstraction errors (17%), which reflect the model's short-term thinking capabilities, such as the ability to make associations, are also notable.
-              Knowledge errors (17%) and perception errors (12%) constitute substantial portions of failures, indicating challenges in recalling the correct knowledge for reasoning, as well as difficulties in identifying static attributes of objects (e.g., color, shape) and dynamic changes (e.g., movement). 
-              By systematically examining these failures, we not only expose critical shortcomings in current MLLMs but also derive actionable insights that can inform the next generation of MLLMs.
-            </p>
-          </div>
-          <div class="content has-text-centered">
-            <img src="static/images/gpt-5_error.png" alt="error distribution" width="25%">
-            <p> Error distribution over 140 annotated GPT-5 errors.</p>
-            <img src="static/images/gemini_error.png" alt="error distribution" width="25%">
-            <p> Error distribution over 140 annotated Geimini-2.5-Pro errors.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="columns is-centered m-6">
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
           <div class="column is-full has-text-centered content">
-            <h2 class="title is-3" id="examples">Error Examples</h2>
-            <div class="carousel results-carousel">
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/1.png" alt="MMR-Life Error Example 1" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/2.png" alt="MMR-Life Error Example 2" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/3.png" alt="MMR-Life Error Example 3" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/4.png" alt="MMR-Life Error Example 4" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/5.png" alt="MMR-Life Error Example 5" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/6.png" alt="MMR-Life Error Example 6" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/7.png" alt="MMR-Life Error Example 7" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/8.png" alt="MMR-Life Error Example 8" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/9.png" alt="MMR-Life Error Example 9" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/10.png" alt="MMR-Life Error Example 10" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/11.png" alt="MMR-Life Error Example 11" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/12.png" alt="MMR-Life Error Example 12" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/13.png" alt="MMR-Life Error Example 13" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/14.png" alt="MMR-Life Error Example 14" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/15.png" alt="MMR-Life Error Example 15" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/16.png" alt="MMR-Life Error Example 16" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/17.png" alt="MMR-Life Error Example 17" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/18.png" alt="MMR-Life Error Example 18" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/19.png" alt="MMR-Life Error Example 19" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/20.png" alt="MMR-Life Error Example 20" width="60%"/></div></div>
-              <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/21.png" alt="MMR-Life Error Example 21" width="60%"/></div></div>
-          </div>
-        </div>
-      </section>
-      
-        <section class="columns is-centered m-6">
-            <div class="column is-full has-text-centered content">
-              <h2 class="title is-3" id="correct-examples">Correct Examples</h2>
-              <div class="carousel results-carousel">
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/1.png" alt="MMR-Life Correct Example 1" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/2.png" alt="MMR-Life Correct Example 2" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/3.png" alt="MMR-Life Correct Example 3" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/4.png" alt="MMR-Life Correct Example 4" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/5.png" alt="MMR-Life Correct Example 5" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/6.png" alt="MMR-Life Correct Example 6" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/7.png" alt="MMR-Life Correct Example 7" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/8.png" alt="MMR-Life Correct Example 8" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/9.png" alt="MMR-Life Correct Example 9" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/10.png" alt="MMR-Life Correct Example 10" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/11.png" alt="MMR-Life Correct Example 11" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/12.png" alt="MMR-Life Correct Example 12" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/13.png" alt="MMR-Life Correct Example 13" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/14.png" alt="MMR-Life Correct Example 14" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/15.png" alt="MMR-Life Correct Example 15" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/16.png" alt="MMR-Life Correct Example 16" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/17.png" alt="MMR-Life Correct Example 17" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/18.png" alt="MMR-Life Correct Example 18" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/19.png" alt="MMR-Life Correct Example 19" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/20.png" alt="MMR-Life Correct Example 20" width="60%"/></div></div>
-                <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/21.png" alt="MMR-Life Correct Example 21" width="60%"/></div></div>
-              </div>
+            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+            <div class="content">
+              <p class="mt-3">Performance comparison of SOTA MLLMs on MMR-Life.</p>
+              <div id="main_result"></div>
             </div>
-          </section>
-        </div>
-      </section>
-
-      <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-          <h2 class="title is-3 has-text-centered">BibTeX</h2>
-          <pre><code>
-            @inproceedings{yue2023mmmu,
-              title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},
-              author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
-              booktitle={Proceedings of CVPR},
-              year={2024},
-            }
-          </code></pre>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This website is website adapted from <a href="https://mmmu.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
-                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- 错误分析 -->
+    <section class="columns is-centered m-6" id="errors">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Error Analysis</h2>
+        <div class="content has-text-justified">
+          <p>
+            We analyze failures of GPT-5 and Gemini-2.5-Pro across reasoning types. Reasoning errors dominate (32%), including causal inversion (24%), temporal confusion (42%), and missing steps (24%). Abstraction issues (17%) and knowledge gaps (17%) highlight the need for stronger long-horizon reasoning and recall; perception errors (12%) show difficulty in fine-grained visual cues.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="static/images/gpt-5_error.png" alt="error distribution" width="25%">
+          <p>Error distribution over 140 annotated GPT-5 errors.</p>
+          <img src="static/images/gemini_error.png" alt="error distribution" width="25%">
+          <p>Error distribution over 140 annotated Gemini-2.5-Pro errors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 例子 -->
+    <section class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="examples">Error Examples</h2>
+        <div class="carousel results-carousel">
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/1.png" alt="MMR-Life Error Example 1" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/2.png" alt="MMR-Life Error Example 2" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/3.png" alt="MMR-Life Error Example 3" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/4.png" alt="MMR-Life Error Example 4" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/5.png" alt="MMR-Life Error Example 5" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/6.png" alt="MMR-Life Error Example 6" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/7.png" alt="MMR-Life Error Example 7" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/8.png" alt="MMR-Life Error Example 8" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/9.png" alt="MMR-Life Error Example 9" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/10.png" alt="MMR-Life Error Example 10" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/11.png" alt="MMR-Life Error Example 11" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/12.png" alt="MMR-Life Error Example 12" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/13.png" alt="MMR-Life Error Example 13" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/14.png" alt="MMR-Life Error Example 14" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/15.png" alt="MMR-Life Error Example 15" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/16.png" alt="MMR-Life Error Example 16" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/17.png" alt="MMR-Life Error Example 17" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/18.png" alt="MMR-Life Error Example 18" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/19.png" alt="MMR-Life Error Example 19" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/20.png" alt="MMR-Life Error Example 20" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/error/21.png" alt="MMR-Life Error Example 21" width="60%"/></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="correct-examples">Correct Examples</h2>
+        <div class="carousel results-carousel">
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/1.png" alt="MMR-Life Correct Example 1" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/2.png" alt="MMR-Life Correct Example 2" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/3.png" alt="MMR-Life Correct Example 3" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/4.png" alt="MMR-Life Correct Example 4" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/5.png" alt="MMR-Life Correct Example 5" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/6.png" alt="MMR-Life Correct Example 6" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/7.png" alt="MMR-Life Correct Example 7" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/8.png" alt="MMR-Life Correct Example 8" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/9.png" alt="MMR-Life Correct Example 9" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/10.png" alt="MMR-Life Correct Example 10" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/11.png" alt="MMR-Life Correct Example 11" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/12.png" alt="MMR-Life Correct Example 12" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/13.png" alt="MMR-Life Correct Example 13" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/14.png" alt="MMR-Life Correct Example 14" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/15.png" alt="MMR-Life Correct Example 15" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/16.png" alt="MMR-Life Correct Example 16" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/17.png" alt="MMR-Life Correct Example 17" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/18.png" alt="MMR-Life Correct Example 18" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/19.png" alt="MMR-Life Correct Example 19" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/20.png" alt="MMR-Life Correct Example 20" width="60%"/></div></div>
+          <div class="box m-5"><div class="content has-text-centered"><img src="static/images/correct/21.png" alt="MMR-Life Correct Example 21" width="60%"/></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>
+@inproceedings{yue2023mmmu,
+  title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},
+  author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
+  booktitle={Proceedings of CVPR},
+  year={2024},
+}
+        </code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website adapts the style of <a href="https://mmmu-benchmark.github.io/">MMMU</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>

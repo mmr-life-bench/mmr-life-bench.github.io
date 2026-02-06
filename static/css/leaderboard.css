@@ -49,28 +49,45 @@ table#results.js-sort-14 tbody tr td:nth-child(15) {
 
 /*table tile*/
 #results th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    border: 1px solid #dfe7f7;
+    padding: 10px;
     font-size: 16px;
     text-align: center;
-    font-weight: 600;
-    background-color: var(--UCLA-darkblue);
-    color: white;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 60%, #0ea5e9 100%);
+    color: #f8fafc;
 }
 
 #results td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
 }
 
-#results tr:nth-child(even) {
-    background-color: #f5f5f5;
+#results tbody tr:nth-child(odd) {
+    background-color: #f8fafc;
 }
 
-#results tr:hover {
-    background-color: #ddd;
+#results tbody tr:nth-child(even) {
+    background-color: #eef2ff;
+}
+
+#results tbody tr:hover {
+    background-color: #dbeafe;
+    transition: background-color 0.15s ease;
+}
+
+/* highlight top rows */
+#results tbody tr:nth-child(2) {
+    background: linear-gradient(135deg, #fff7e6 0%, #ffeec2 100%);
+    font-weight: 700;
+}
+
+#results tbody tr:nth-child(3) {
+    background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+}
+
+#results tbody tr:nth-child(4) {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
 }
 
 .js-sort-number:hover {
