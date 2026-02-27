@@ -454,17 +454,5 @@ score_table = {
         "Inductive": 11.89,
         "Spatial": 9.8,
         "Temporal": 11.07
-    },
-    "38": {
-        "Model": "Kimi-VL-A3B",
-        "Source": "https://arxiv.org/abs/2504.07491",
-        "Overall": 4.84,
-        "Abductive": 3.91,
-        "Analogical": 0.0,
-        "Causal": 0.38,
-        "Deductive": 20.21,
-        "Inductive": 0.0,
-        "Spatial": 4.71,
-        "Temporal": 8.49
     }
 }
