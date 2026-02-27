@@ -50,12 +50,12 @@
               <div class="is-size-5 publication-authors">
                 <span class="author-block core-author">Jiachun Li*†,</span>
                 <span class="author-block core-author">Shaoping Huang*,</span>
-                <span class="author-block">Zhuoran Jin,</span>
-                <span class="author-block">Chenlong Zhang,</span>
-                <span class="author-block">Pengfei Cao,</span>
-                <span class="author-block">Yubo Chen,</span>
-                <span class="author-block">Kang Liu,</span>
-                <span class="author-block">Jun Zhao</span>
+                <span class="author-block core-author">Zhuoran Jin,</span>
+                <span class="author-block core-author">Chenlong Zhang,</span>
+                <span class="author-block core-author">Pengfei Cao,</span>
+                <span class="author-block core-author">Yubo Chen,</span>
+                <span class="author-block core-author">Kang Liu,</span>
+                <span class="author-block core-author">Jun Zhao</span>
               </div>
               <br>
               <div class="is-size-6 publication-authors">
@@ -74,22 +74,16 @@
                   <a href="https://github.com/BugMakerzzz/MMR-Life" class="pill-btn">
                     <i class="fab fa-github"></i><span>Code</span>
                   </a>
-                  <a href="#leaderboard" class="pill-btn">
-                    <i class="fa-solid fa-trophy"></i><span>Leaderboard</span>
-                  </a>
-                  <a href="#examples" class="pill-btn">
-                    <i class="fa-solid fa-book"></i><span>Examples</span>
-                  </a>
                 </div>
               </div>
 
               <div class="highlight-grid">
                 <div class="highlight-card">
-                  <p class="highlight-title">2,676 Questions</p>
-                  <p class="highlight-text">Multi-image multiple-choice tasks from daily scenes.</p>
+                  <p class="highlight-title">2,646 Questions</p>
+                  <p class="highlight-text">Multi-image reasoning tasks from daily scenes.</p>
                 </div>
                 <div class="highlight-card">
-                  <p class="highlight-title">19,367 Images</p>
+                  <p class="highlight-title">19,108 Images</p>
                   <p class="highlight-text">Household, dining, sports, and real-life contexts.</p>
                 </div>
                 <div class="highlight-card">
@@ -122,13 +116,13 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">🔔News</h2>
             <div class="content has-text-justified">
-              <p class="news-item"><span class="news-date">📢[2026-02-07]</span> Officially open-sourced the paper, dataset, and code.</p>
+              <p class="news-item"><span class="news-date">📢[2026-02-27]</span> Officially open-sourced the paper, dataset, and code.</p>
               <p class="news-item"><span class="news-date">🎉[2026-01-26]</span> Our paper was accepted to <span class="highlight">ICLR 2026</span>.</p>
             </div>
             <h2 class="title is-3">Introduction</h2>
             <div class="content has-text-justified">
               <p>
-                Recent progress in the reasoning capabilities of multimodal large language models (MLLMs) has empowered them to address more complex tasks such as scientific analysis and mathematical reasoning. Despite their promise, MLLMs’ reasoning abilities across different scenarios in real life remain largely unexplored and lack standardized benchmarks for evaluation. To address this gap, we introduce MMR-Life, a comprehensive benchmark designed to evaluate the diverse multimodal multi-image reasoning capabilities of MLLMs across real-life scenarios. MMR-Life consists of <span class="intro-strong">2,676</span> multiple-choice questions based on <span class="intro-strong">19,367</span> images primarily sourced from real-world contexts, comprehensively covering seven reasoning types: abductive, analogical, causal, deductive, inductive, spatial, and temporal. Unlike existing reasoning benchmarks, MMR-Life does not rely on domain-specific expertise but instead requires models to integrate information across multiple images and apply diverse reasoning abilities. The evaluation of <span class="intro-strong">37</span> advanced models highlights the substantial challenge posed by MMR-Life. Even top models like GPT-5 achieve only <span class="intro-strong">58%</span> accuracy and display considerable variance in performance across reasoning types. Moreover, we analyze the reasoning paradigms of existing MLLMs, exploring how factors such as thinking length, reasoning method, and reasoning type affect their performance. In summary, MMR-Life establishes a comprehensive foundation for evaluating, analyzing, and improving the next generation of multimodal reasoning systems.
+                Recent progress in the reasoning capabilities of multimodal large language models (MLLMs) has empowered them to address more complex tasks such as scientific analysis and mathematical reasoning. Despite their promise, MLLMs’ reasoning abilities across different scenarios in real life remain largely unexplored and lack standardized benchmarks for evaluation. To address this gap, we introduce MMR-Life, a comprehensive benchmark designed to evaluate the diverse multimodal multi-image reasoning capabilities of MLLMs across real-life scenarios. MMR-Life consists of <span class="intro-strong">2,646</span> multiple-choice questions based on <span class="intro-strong">19,108</span> images primarily sourced from real-world contexts, comprehensively covering seven reasoning types: abductive, analogical, causal, deductive, inductive, spatial, and temporal. Unlike existing reasoning benchmarks, MMR-Life does not rely on domain-specific expertise but instead requires models to integrate information across multiple images and apply diverse reasoning abilities. The evaluation of <span class="intro-strong">37</span> advanced models highlights the substantial challenge posed by MMR-Life. Even top models like GPT-5 achieve only <span class="intro-strong">58%</span> accuracy and display considerable variance in performance across reasoning types. Moreover, we analyze the reasoning paradigms of existing MLLMs, exploring how factors such as thinking length, reasoning method, and reasoning type affect their performance. In summary, MMR-Life establishes a comprehensive foundation for evaluating, analyzing, and improving the next generation of multimodal reasoning systems.
               </p>
             </div>
           </div>
@@ -153,20 +147,16 @@
             <h2 class="title is-3">Dataset Overview</h2>
             <div class="content has-text-justified">
               <p>
-                MMR-Life evaluates how models integrate information across multiple images to solve everyday problems. Each item combines real-world photos (home, dining, travel, sports) with carefully designed distractors to test multi-step reasoning rather than single-image perception.
+                MMR-Life evaluates how models integrate information across multiple images to solve everyday problems. Each item combines real-world photos (home, dining, sports...) with carefully designed distractors to test multi-step reasoning rather than single-image perception.
               </p>
               <img src="static/images/example.png" alt="MMR-Life example" class="center">
               <br>
-              <p>
-                Coverage: 2,676 questions, 19,367 images, 7 reasoning types, 21 tasks. Designed to be broad (commonsense-heavy) yet challenging (multi-hop reasoning with subtle visual cues).
-              </p>
             </div>
             <div class="pill-grid">
               <span class="pill">Real-world scenes</span>
-              <span class="pill">Multi-image inputs</span>
-              <span class="pill">Balanced reasoning skills</span>
-              <span class="pill">Commonsense heavy</span>
-              <span class="pill">Task diversity</span>
+              <span class="pill">Multimodal Multi-image inputs</span>
+              <span class="pill">Diverse Reasoning Types</span>
+              <span class="pill">General-Knowledge Reasoning</span>
             </div>
           </div>
         </div>
